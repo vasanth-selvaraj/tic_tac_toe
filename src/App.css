@@ -1,38 +1,177 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.tic-tac-toe-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.tic-tac-toe-board {
+  display: flex;
+  flex-direction: column;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  background-color: white;
+  color: black;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border: 1px solid black;
 }
 
-.App-link {
-  color: #61dafb;
+.status {
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.reset-button {
+  background-color: #1DA1F2;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.reset-button:hover {
+  background-color: #0C6DA9;
+}
+
+/* @keyframes confetti {
+  0% {
+    transform: translateY(0) rotate(0);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translateY(-100%) rotate(360deg);
+  }
+}
+
+.confetti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #4caf50;
+  animation: confetti 1s ease-out infinite;
+}
+
+.confetti.red {
+  background-color: #f44336;
+}
+
+.confetti.blue {
+  background-color: #2196f3;
+}
+
+.confetti.yellow {
+  background-color: #ffeb3b;
+}
+
+.confetti.green {
+  background-color: #4caf50;
+}
+
+.confetti-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+} */
+/* .confetti {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50;
+  animation: confettiDrop 1s ease-out infinite;
+}
+
+.confetti.red {
+  background-color: #f44336;
+}
+
+.confetti.blue {
+  background-color: #2196f3;
+}
+
+.confetti.yellow {
+  background-color: #ffeb3b;
+}
+
+.confetti.green {
+  background-color: #4caf50;
+}
+
+@keyframes confettiDrop {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+} */
+
+.confetti {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  background-color: #4caf50;
+  animation: confettiDrop 2s ease-out infinite;
+}
+
+.confetti.red {
+  background-color: #f44336;
+}
+
+.confetti.blue {
+  background-color: #2196f3;
+}
+
+.confetti.yellow {
+  background-color: #ffeb3b;
+}
+
+.confetti.green {
+  background-color: #4caf50;
+}
+
+@keyframes confettiDrop {
+  0% {
+    top: -50px;
+    transform: translateX(-50%) rotate(45deg);
+  }
+  100% {
+    top: 100%;
+    transform: translateX(-50%) rotate(45deg);
   }
 }
